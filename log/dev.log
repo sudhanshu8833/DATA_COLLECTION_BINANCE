@@ -1,6 +1,188 @@
-INFO 2023-01-11 22:52:58,721 strategy 47845 123145454944256 /Users/sudhanshu/Desktop/algo-trading/PROJECTS/Mamu_options
-INFO 2023-01-11 22:53:49,623 strategy 47988 123145466728448 /Users/sudhanshu/Desktop/algo-trading/PROJECTS/Mamu_options
-INFO 2023-01-11 22:55:48,584 strategy 47988 123145466728448 /Users/sudhanshu/Desktop/algo-trading/PROJECTS/Mamu_options
-INFO 2023-01-11 22:57:05,758 strategy 48711 123145621053440 /Users/sudhanshu/Desktop/algo-trading/PROJECTS/Mamu_options
-INFO 2023-01-11 22:57:59,893 strategy 49179 123145441599488 /Users/sudhanshu/Desktop/algo-trading/PROJECTS/Mamu_options
-INFO 2023-01-11 22:59:04,683 strategy 49428 123145628160000 /Users/sudhanshu/Desktop/algo-trading/PROJECTS/Mamu_options
+
+INFO 2023-12-17 12:29:23,609 views 27017 123145489076224 ITS WORKING
+INFO 2023-12-17 12:29:23,610 views 27017 123145489076224 34.0
+INFO 2023-12-17 12:29:46,130 views 27039 123145651720192 ITS WORKING
+INFO 2023-12-17 12:29:46,142 views 27039 123145651720192 34.0
+INFO 2023-12-17 12:29:53,338 views 27054 123145417515008 ITS WORKING
+INFO 2023-12-17 12:29:53,338 views 27054 123145417515008 30
+INFO 2023-12-17 12:30:11,779 views 27054 123145417515008 ITS WORKING
+INFO 2023-12-17 12:30:11,781 views 27054 123145417515008 35
+INFO 2023-12-17 12:30:42,819 views 27103 123145436213248 ITS WORKING
+INFO 2023-12-17 12:35:00,002 views 27103 123145436213248 ITS WORKING
+INFO 2023-12-17 12:40:00,000 views 27103 123145436213248 ITS WORKING
+INFO 2023-12-17 12:45:00,000 views 27103 123145436213248 ITS WORKING
+INFO 2023-12-17 12:50:18,473 views 27103 123145436213248 ITS WORKING
+INFO 2023-12-17 12:51:16,362 views 27103 123145436213248 Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pymongo/pool.py", line 1585, in connect
+    sock = _configured_socket(self.address, self.opts)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pymongo/pool.py", line 1270, in _configured_socket
+    sock = _create_connection(address, options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pymongo/pool.py", line 1223, in _create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sid/Desktop/algo-trading/PROFESSIONAL/PROJECT56_DATACOLLECTION/datamanagement/views.py", line 49, in main
+    admin_data=admin.find_one()
+               ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pymongo/collection.py", line 1506, in find_one
+    for result in cursor.limit(-1):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pymongo/cursor.py", line 1264, in next
+    if len(self.__data) or self._refresh():
+                           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pymongo/cursor.py", line 1181, in _refresh
+    self.__send_message(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pymongo/cursor.py", line 1060, in __send_message
+    response = client._run_operation(
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pymongo/_csot.py", line 107, in csot_wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pymongo/mongo_client.py", line 1394, in _run_operation
+    return self._retryable_read(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pymongo/mongo_client.py", line 1492, in _retryable_read
+    return self._retry_internal(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pymongo/_csot.py", line 107, in csot_wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pymongo/mongo_client.py", line 1462, in _retry_internal
+    ).run()
+      ^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pymongo/mongo_client.py", line 2315, in run
+    return self._read() if self._is_read else self._write()
+           ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pymongo/mongo_client.py", line 2439, in _read
+    with self._client._conn_from_server(self._read_pref, self._server, self._session) as (
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pymongo/mongo_client.py", line 1330, in _conn_from_server
+    with self._checkout(server, session) as conn:
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pymongo/mongo_client.py", line 1252, in _checkout
+    with server.checkout(handler=err_handler) as conn:
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pymongo/pool.py", line 1637, in checkout
+    conn = self._get_conn(handler=handler)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pymongo/pool.py", line 1756, in _get_conn
+    conn = self.connect(handler=handler)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pymongo/pool.py", line 1595, in connect
+    _raise_connection_failure(self.address, error, timeout_details=details)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pymongo/pool.py", line 411, in _raise_connection_failure
+    raise AutoReconnect(msg) from error
+pymongo.errors.AutoReconnect: ac-l4avjns-shard-00-01.sxyyewj.mongodb.net:27017: [Errno 8] nodename nor servname provided, or not known (configured timeouts: connectTimeoutMS: 20000.0ms)
+
+INFO 2023-12-17 12:51:16,365 views 27103 123145436213248 ITS WORKING
+INFO 2023-12-17 13:21:34,119 views 27103 123145436213248 Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 466, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 461, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1374, in getresponse
+    response.begin()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 1278, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 1134, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 357, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.binance.com', port=443): Read timed out. (read timeout=10)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sid/Desktop/algo-trading/PROFESSIONAL/PROJECT56_DATACOLLECTION/datamanagement/views.py", line 60, in main
+    downloaded_data=client.get_klines(symbol=symbol,interval="5m",limit=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/binance/client.py", line 919, in get_klines
+    return self._get('klines', data=params, version=self.PRIVATE_API_VERSION)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/binance/client.py", line 415, in _get
+    return self._request_api('get', path, signed, version, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/binance/client.py", line 378, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/binance/client.py", line 358, in _request
+    self.response = getattr(self.session, method)(uri, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/requests/adapters.py", line 532, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.binance.com', port=443): Read timed out. (read timeout=10)
+
+INFO 2023-12-17 13:21:34,125 views 27103 123145436213248 ITS WORKING
+INFO 2023-12-17 15:15:46,077 views 31834 123145428320256 ITS WORKING
+INFO 2023-12-17 15:16:02,220 views 31834 123145428320256 ITS WORKING
+INFO 2023-12-17 15:16:12,305 views 31834 123145428320256 ITS WORKING
+INFO 2023-12-17 15:16:25,296 views 31834 123145428320256 ITS WORKING
+INFO 2023-12-17 15:16:58,848 views 31946 123145556541440 ITS WORKING
+INFO 2023-12-17 15:17:21,252 views 31946 123145556541440 ITS WORKING
+INFO 2023-12-17 15:17:33,464 views 31946 123145556541440 ITS WORKING
+INFO 2023-12-17 15:17:46,610 views 31946 123145556541440 ITS WORKING
+INFO 2023-12-17 15:18:01,778 views 31946 123145556541440 ITS WORKING
+INFO 2023-12-17 15:18:15,268 views 31946 123145556541440 ITS WORKING
+INFO 2023-12-17 15:22:33,319 views 32151 123145667080192 Traceback (most recent call last):
+  File "/Users/sid/Desktop/algo-trading/PROFESSIONAL/PROJECT56_DATACOLLECTION/datamanagement/views.py", line 105, in extract
+    data1=data.find_one({symbol:{"$exists":True}})[symbol]
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+
